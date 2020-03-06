@@ -1,18 +1,17 @@
 Release: 1.2.0
 ==============
 
-This release is based on 4.15.0-64-generic Linux kernel and verified on Ubuntu 18.04.1 LTS.
+此发行版基于 4.15.0-64-generic Linux 内核并在 Ubuntu 18.04.1 LTS 上验证过.
 
-This release is validated on QEP HW design with standard Linux tools such as
-hping3 and standard interface is configured through ifconfig and IP utility.
+此发行版在 QEP HW 设计方案使用标准 Linux 工具（比如hping3）进行了验证，并且标准接口可用通过ifconfig和 IP utility 进行配置。
 
 This release is validated to confirm the functionality of security block for
 MAC & VLAN filtering, Checksum offload and RSS.
 
-SUPPORTED FEATURES:
+受支持特性:
 ===================
-- 100G Ethernet MAC
-- Read MAC address from security block
+- 100G 以太网 MAC
+- 从安全块读取 MAC 地址
 - Streaming Traffic Manager for Networking
 - QDMA for data transfer
 - 256 streaming queues for Network PF
@@ -24,7 +23,7 @@ SUPPORTED FEATURES:
 	- IPv6
 	- IPv6 TCP
 
-KNOWN BUGS:
+已知 BUG:
 ===========
 - IPv4 fragmented packets are directed to different RSS redirection table entries.
 - Sometimes packets processing halts when RSS is enabled and driver is configured for more than 128 queues.
