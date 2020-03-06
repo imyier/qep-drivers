@@ -73,13 +73,9 @@ qep-ctl 提供以下常规选项.
 
  -d: 此选项用于选择设备，有效BDF必须此规范。如果提供 (-d) 选项， CLI 就会查询你 Xilinx PCI device 
 	(0x7000) 的BDF. 如果设备有不同的 PCI 设备 ID，那么源码中的 PCIE_DEV_ID_MGMT_PF 宏必须更新
-	才能检测到设备. In case, the 
-	system has multiple devices, then BDF must be provided with each command. 
+	才能检测到设备. 防止特殊情况，含有多个设备的系统，每条命令都必须提供 BDF. 
 
- -b: This option is used to specify PCIe BAR number for direct register read
-	and write. By default, BAR number is 2 which is user BAR. Default user bar
-	can be updated using DEFAULT_USER_BAR macro in source code.
+ -b: 此选项用于指定 direct register 读写用的 PCIe BAR 数量. 默认情况下，每个用户 BAR 的 BAR 数量为2. 
+        默认用户 BAR 可以通过源码中的 DEFAULT_USER_BAR 宏进行更新.
 
- -c: This option is used to specify the direction. It takes 'rx' or 'tx' as a 
-	parameter. if this option is not specified command is applied on both 
-	directions.
+ -c:此选项用于指定传输方向. 可选参数为 'rx' 或 'tx' . 如果选项没有指定默认双向.
