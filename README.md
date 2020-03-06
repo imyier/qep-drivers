@@ -1,17 +1,12 @@
-# Xilinx QDMA Ethernet Platform (QEP) drivers
+# Xilinx QDMA Ethernet Platform (QEP) 驱动
 
-## QDMA Ethernet Platform
+## QDMA以太网平台（QDMA Ethernet Platform）
 
-The QEP design adds Ethernet support to QDMA based streaming platform.
-The Ethernet Subsystem is added to the static region of the shell.
-The platform has three physical functions, two physical functions for device management (PF0) and compute acceleration (PF1), and one physical function (PF2) for Network acceleration.
-The Ethernet subsystem is accessible to the host via PF2.
+QEP 设计方案对基于QDMA的流平台添加了以太网支持。以太网子系统被添加到shell的静态区域。此平台有三种物理层功能，其中两种功能是设备管理(PF0)与计算加速(PF1),另一个物理功能是网络加速 (PF2)。以太网子系统通过PF2接入主机。
+Linux内核驱动与 DPDK 驱动都可以运行在PCI Express root port 主机PC上与QEP终端IP通过PCIE交互。qep-ctl 是一个QDMA 以太网平台配置工具。
 
-Both the linux kernel driver and the DPDK driver can be run on a PCI Express root port host PC to interact with the QEP endpoint IP via PCI Express.
-qep-ctl is a utility to configure the QDMA Ethernet platform.
+### 起步文档
 
-### Getting Started
+* [QEP 驱动详细文档](https://xilinx.github.io/qep-drivers/)
 
-* [QEP Drivers Comprehensive documentation](https://xilinx.github.io/qep-drivers/)
-
-* [QEP control application User Guide](qep-ctl/readme.txt)
+* [QEP 控制程序用户指南](qep-ctl/readme.txt)
