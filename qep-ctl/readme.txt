@@ -1,17 +1,17 @@
 ---------
 qep-ctl
 ---------
-A utility to configure QDMA Ethernet Platform (QEP). 
+QDMA Ethernet Platform (QEP) 配置工具包. 
 
-Build:
+编译:
 -------
 	gcc qep_ctl.c -o qep-ctl
 
-Supported Command:
+支持的命令:
 ------------------
-qep-ctl supports following commands.
+qep-ctl 支持以下命令.
 
-	1. help : This command displays a short usage. The output looks as below.
+	1. help : 此命令展示简短的用法.输入如下.
 		./qep-ctl CMD [ options ]
 		  CMD = [ config | show | read | write | help ]
 		  Options =  -d BDF
@@ -20,8 +20,7 @@ qep-ctl supports following commands.
 					 -m mac_addr
 					 -v VID,DEI,PCP
 					 -e [ mac,vlan,discard ] [ disable ]
-	2. config : This command configures the Ethernet MAC address and 802.1Q 
-	VLAN fields. 
+	2. config : 此命令配置以太网 MAC 地址与 802.1Q VLAN 域. 
 		-m: With this option Ethernet MAC address is updated in the hardware.
 			The MAC address is used by qep drivers at probe time. 
 			e.g. ./qep-ctl config -m 01:02:03:03:04:06
@@ -68,14 +67,13 @@ qep-ctl supports following commands.
 		and BAR use general options.
 		e.g.  ./qep-ctl write 0x0010000 0xef
 	
-General Options:
+常规选项:
 ----------------
-qep-ctl provides below general options. 
+qep-ctl 提供以下常规选项. 
 
- -d: This option is used for device selection and must be followed by valid 
-	BDF. If (-d) option is not provided, CLI looks for BDF of Xilinx PCI device 
-	(0x7000). If the device has a different PCI device ID then PCIE_DEV_ID_MGMT_PF 
-	macro in source code must be updated to detect the device. In case, the 
+ -d: 此选项用于选择设备，有效BDF必须此规范。如果提供 (-d) 选项， CLI 就会查询你 Xilinx PCI device 
+	(0x7000) 的BDF. 如果设备有不同的 PCI 设备 ID，那么源码中的 PCIE_DEV_ID_MGMT_PF 宏必须更新
+	才能检测到设备. In case, the 
 	system has multiple devices, then BDF must be provided with each command. 
 
  -b: This option is used to specify PCIe BAR number for direct register read
