@@ -21,11 +21,11 @@ qep-ctl 支持以下命令.
 					 -v VID,DEI,PCP
 					 -e [ mac,vlan,discard ] [ disable ]
 	2. config : 此命令配置以太网 MAC 地址与 802.1Q VLAN 域. 
-		-m: With this option Ethernet MAC address is updated in the hardware.
-			The MAC address is used by qep drivers at probe time. 
-			e.g. ./qep-ctl config -m 01:02:03:03:04:06
+		-m: 此选项用于更新硬件的以太网 MAC 地址.
+			MAC 地址在 qep 驱动 probe 的时候用到. 
+			示例： ./qep-ctl config -m 01:02:03:03:04:06
 
-		-v: VLAN identifier(VID), Drop eligible indicator(DEI)and Priority code
+		-v: VLAN 标识符(VID), Drop eligible indicator(DEI)and Priority code
 			point(PCP) are provided with (-v) option. The values are comma 
 			separated in order of VID, DEI, PCP respectively. DEI and PCP are 
 			optional. 
